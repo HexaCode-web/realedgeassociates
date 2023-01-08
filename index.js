@@ -10,7 +10,7 @@ document.addEventListener("scroll", () => {
     Nav.style.backgroundColor = "#111111";
     Nav.style.width = "100%";
   } else {
-    Nav.style.position = "static";
+    Nav.style.position = "relative";
     Nav.style.paddingTop = "0px";
     Nav.style.backgroundColor = "transparent";
     Nav.style.width = "99%";
