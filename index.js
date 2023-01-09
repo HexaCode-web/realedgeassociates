@@ -26,8 +26,10 @@ const ViewEl = () => {
     Nav.style.paddingTop = "0";
     Nav.style.backgroundColor = "#111111";
     Nav.style.width = "100%";
+    Nav.style.boxShadow = "0 0 15px rgb(0 0 0 / 50%)";
     NavMob.classList.add("test");
   } else {
+    Nav.style.boxShadow = "none";
     Nav.style.position = "relative";
     Nav.style.paddingTop = "0px";
     Nav.style.backgroundColor = "transparent";
