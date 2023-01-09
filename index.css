@@ -637,6 +637,10 @@ FOOTER
     margin: 0;
     max-width: 100%;
   }
+  .AboutUs {
+    padding-bottom: 0px;
+    height: fit-content;
+  }
   .footer {
     height: fit-content;
     padding-bottom: 30px;
