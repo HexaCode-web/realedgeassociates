@@ -11,7 +11,6 @@ const result = document.querySelector(".result");
 const submitBTN = document.querySelector("#submit");
 const statusMSG = document.querySelector(".status");
 const Form = document.querySelector("form");
-
 const FormInput = Form.querySelectorAll(".InputItem");
 document.addEventListener("scroll", () => {
   ViewEl();
@@ -22,7 +21,6 @@ document.addEventListener("touchmove", () => {
 const ViewEl = () => {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  console.log(windowWidth);
   const revealPoint = 150;
   if (Header.getBoundingClientRect().top < -66) {
     Nav.style.position = "fixed";
