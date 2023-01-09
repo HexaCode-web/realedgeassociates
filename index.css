@@ -563,7 +563,24 @@ FOOTER
     transform: translateX(0);
   }
 }
-@media (max-width: 375px) {
+@media only screen and (max-width: 600px) {
+  .nav-item,
+  .dropdown-item {
+    font-size: 1.05rem;
+  }
+  .main {
+    overflow-x: hidden;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    background-color: transparent !important;
+  }
+  .test {
+    background-color: black !important;
+  }
   html {
     font-size: 11.5px;
   }
@@ -646,7 +663,7 @@ FOOTER
     min-width: 69%;
   }
 }
-/* @media (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .nav-item,
   .dropdown-item {
     font-size: 1.05rem;
@@ -692,4 +709,4 @@ FOOTER
   #recaptcha {
     min-width: 36%;
   }
-} */
+}
