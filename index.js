@@ -11,6 +11,7 @@ const result = document.querySelector(".result");
 const submitBTN = document.querySelector("#submit");
 const statusMSG = document.querySelector(".status");
 const Form = document.querySelector("form");
+
 const FormInput = Form.querySelectorAll(".InputItem");
 document.addEventListener("scroll", () => {
   ViewEl();
@@ -20,6 +21,8 @@ document.addEventListener("touchmove", () => {
 });
 const ViewEl = () => {
   const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+  console.log(windowWidth);
   const revealPoint = 150;
   if (Header.getBoundingClientRect().top < -66) {
     Nav.style.position = "fixed";
@@ -66,36 +69,45 @@ const ViewEl = () => {
     });
   }
   if (SectionList[2].getBoundingClientRect().top < windowHeight - revealPoint) {
-    buttonsList.forEach((button, i) => {
-      switch (i) {
-        case 0:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromLeft 1s 0s both";
-          break;
-        case 1:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromTop 1s 0s both";
-          break;
-        case 2:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromRight 1s 0s both";
-          break;
-        case 3:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromLeft 1s .2s both";
-          break;
-        case 4:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromBottom 1s 0s both";
-          break;
-        case 5:
-          button.style.opacity = "1";
-          button.style.animation = "SlideFromRight 1s .2s both";
-          break;
-        default:
-          break;
-      }
-    });
+    if (windowWidth < 768) {
+      let delay = 0.1;
+      buttonsList.forEach((button) => {
+        delay += 0.1;
+        button.style.opacity = "1";
+        button.style.animation = `SlideFromTop 1s ${delay}s both`;
+      });
+    } else {
+      buttonsList.forEach((button, i) => {
+        switch (i) {
+          case 0:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromLeft 1s 0s both";
+            break;
+          case 1:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromTop 1s 0s both";
+            break;
+          case 2:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromRight 1s 0s both";
+            break;
+          case 3:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromLeft 1s .2s both";
+            break;
+          case 4:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromBottom 1s 0s both";
+            break;
+          case 5:
+            button.style.opacity = "1";
+            button.style.animation = "SlideFromRight 1s .2s both";
+            break;
+          default:
+            break;
+        }
+      });
+    }
   }
   if (SectionList[3].getBoundingClientRect().top < windowHeight - revealPoint) {
     SectionList[3].querySelector(".innerInfo").style.opacity = "1";
