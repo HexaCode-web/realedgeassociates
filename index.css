@@ -563,7 +563,7 @@ FOOTER
     transform: translateX(0);
   }
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-item,
   .dropdown-item {
     font-size: 1.05rem;
@@ -610,7 +610,7 @@ FOOTER
     min-width: 36%;
   }
 }
-@media only screen and (max-width: 375px) {
+@media (max-width: 375px) {
   html {
     font-size: 11.5px;
   }
