@@ -22,14 +22,46 @@
     border: 1px none #ffffff00;
   }
 }
-
+.hover,
+#reload,
+input,
+textarea,
+.button-wrapper button {
+  --c: #9a59b7; /* the border color */
+  --b: 3px; /* the border thickness*/
+  --g: 10px; /* the gap on hover */
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%, var(--c) 0;
+  background: conic-gradient(
+        from 180deg at top var(--b) right var(--b),
+        var(--_g)
+      )
+      var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+    conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
+      var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+  cursor: pointer;
+}
+.hover:hover,
+#reload:hover,
+.button-wrapper button:hover,
+input:focus,
+textarea:focus {
+  --_i: 100%;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+/*
+///////
+GENERAL
+/////// 
+ */
 body {
   margin: 0;
   padding: 0px;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
 }
 .main {
   display: flex;
@@ -39,7 +71,11 @@ body {
   height: 100vh;
   gap: 40px;
 }
-
+/*
+///////
+HEADER
+/////// 
+ */
 .Header {
   background-image: url(images/19239-london-lights-2560x1440-world-wallpaper.jpg);
   background-size: cover;
@@ -48,48 +84,13 @@ body {
   width: 100vw;
   color: white;
 }
-.content {
-  position: relative;
-  z-index: 1;
-  border-radius: 15px;
-  padding: 10px;
-  backdrop-filter: blur(3px);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 150px;
-}
-
-.content h1 {
-  font-weight: bolder;
-  font-size: 4.5rem;
-  line-height: 75px;
-  animation: SlideFromTop 1s 0.3s both;
-}
-.content p {
-  max-width: 700px;
-  font-weight: 700;
-  line-height: 28px;
-  animation: SlideFromBottom 1s 0.5s both;
-}
-.content button {
-  animation: SlideFromBottom 1s 1s both;
-}
+/*
+///////
+NAVBAR
+/////// 
+ */
 .navbar {
   display: none;
-}
-button,
-#carouselExampleFade button {
-  margin: 10px auto;
-  background-color: transparent;
-  border: 2px solid white;
-  font-family: "Lora", serif;
-  color: white;
-  font-size: 1rem;
-  width: 120px;
-  height: 52px;
-  font-weight: 400;
-  transition: 0.5s all;
 }
 .navbar-brand img {
   width: 70px;
@@ -125,10 +126,8 @@ button,
   --bs-nav-link-padding-x: 0px;
 }
 .nav-item {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  font-style: italic;
-  font-weight: lighter;
   margin: 5px 10px;
 }
 .nav-item a {
@@ -151,6 +150,61 @@ button,
 .dropdown-menu {
   background-color: black;
 }
+/*
+///////
+HEADER CONTENT
+/////// 
+ */
+.content {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  padding: 10px;
+  backdrop-filter: blur(3px);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.content h1 {
+  font-weight: bolder;
+  font-size: 4.2rem;
+  line-height: 75px;
+  animation: SlideFromTop 1s 0.3s both;
+}
+.content p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 28px;
+  animation: SlideFromBottom 1s 0.5s both;
+}
+.fromPageText {
+  max-width: none;
+}
+.content button {
+  animation: SlideFromBottom 1s 1s both;
+}
+
+button,
+#carouselExampleFade button {
+  margin: 10px auto;
+  background-color: transparent;
+  border: 2px solid white;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1rem;
+  width: 120px;
+  height: 52px;
+  font-weight: 400;
+  transition: 0.5s all;
+}
+/*
+///////
+SECTION 1
+/////// 
+ */
 .Cards {
   width: 100%;
   height: fit-content;
@@ -169,6 +223,7 @@ button,
   max-width: 1100px;
 }
 .Cards h2 {
+  opacity: 0;
   font-size: 38px;
   padding: 5px;
   border-bottom: 2px solid black;
@@ -212,6 +267,11 @@ button,
   width: 20px;
   height: 20px;
 }
+/*
+///////
+SECTION 2
+/////// 
+ */
 .Links {
   width: 100%;
   height: 600px;
@@ -233,17 +293,25 @@ button,
   grid-template-rows: 50% 50%;
 }
 .button-wrapper button {
+  opacity: 0;
   padding: 10px;
   font-size: 1.2rem;
   width: fit-content;
-  border: 2px solid black;
+  --c: #9a59b7; /* the border color */
+  --b: 2px; /* the border thickness*/
+  --g: 2px; /* the gap on hover */
   color: black;
+  border: 2px solid black;
 }
-button:hover,
-#carouselExampleFade button:hover {
-  border: 2px solid #9a59b7;
+.button-wrapper button:hover {
+  border: none;
   scale: 1.02;
 }
+/*
+///////
+SECTION 3
+/////// 
+ */
 .AboutUs {
   display: flex;
   flex-direction: column;
@@ -252,12 +320,15 @@ button:hover,
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 1050px;
+  height: fit-content;
   padding: 90px 30px;
   color: white;
 }
 .AboutUs h1 {
   font-size: 3rem;
+}
+.innerInfo {
+  opacity: 0;
 }
 .Info {
   gap: 15px;
@@ -271,9 +342,15 @@ button:hover,
   font-size: 1rem;
 }
 .Who-Photo {
+  opacity: 0;
   margin-right: 20px;
   border-radius: 15px;
   max-width: 50%;
+}
+#carouselExampleFade button:hover,
+button:hover {
+  border: 2px solid #9a59b7;
+  scale: 1.02;
 }
 .carousel-control-next {
   position: static;
@@ -284,13 +361,25 @@ button:hover,
   max-height: 200px;
   min-height: 200px;
 }
+/*
+///////
+FORM
+/////// 
+ */
+.Contact h1 {
+  opacity: 0;
+}
 form {
   height: fit-content;
   display: grid;
   grid-template-areas:
     "Fname Lname"
     "Email Email"
+    "Subject Subject"
     "Message Message"
+    "text text"
+    "recaptcha recaptcha"
+    "status status"
     "Submit Submit";
   margin-bottom: 30px;
   gap: 10px;
@@ -309,6 +398,7 @@ textarea {
   box-sizing: border-box;
   appearance: auto;
   resize: none;
+  cursor: auto;
 }
 input:focus,
 textarea:focus {
@@ -318,6 +408,7 @@ form button {
   grid-area: Submit;
 }
 .InputItem {
+  opacity: 0;
   display: grid;
   background-color: transparent;
   flex-direction: column;
@@ -332,9 +423,74 @@ form button {
   width: 100%;
   grid-area: Email;
 }
+#Subject-wrapper {
+  width: 100%;
+  grid-area: Subject;
+}
 #Msg-wrapper {
   grid-area: Message;
 }
+/*
+///////
+RECAPTCHA
+/////// 
+ */
+.inactive {
+  opacity: 0;
+}
+.status {
+  font-size: 1.5rem;
+  grid-area: status;
+  text-align: center;
+  color: #1dee3b;
+  font-weight: 600;
+}
+.text {
+  grid-area: text;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+.error {
+  color: red;
+}
+#recaptcha {
+  background-color: rgba(255, 255, 255, 0.096);
+  width: 27%;
+  margin: 0 auto;
+  height: fit-content;
+  border-radius: 10px;
+  grid-area: recaptcha;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#recaptcha #reload {
+  --b: 2px; /* the border thickness*/
+  --g: 0px; /* the gap on hover */
+  cursor: pointer;
+}
+.result {
+  border: 1px solid #9a59b7;
+  margin: 0;
+  text-align: center;
+  width: 47px;
+  height: 38px;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+}
+
+/*
+///////
+FOOTER
+/////// 
+ */
 .footer {
   color: black;
   background-color: white;
@@ -387,28 +543,26 @@ form button {
     transform: translateY(0);
   }
 }
-
-.hover {
-  --c: #9a59b7; /* the border color */
-  --b: 3px; /* the border thickness*/
-  --g: 10px; /* the gap on hover */
-  padding: calc(var(--g) + var(--b));
-  --_g: #0000 25%, var(--c) 0;
-  background: conic-gradient(
-        from 180deg at top var(--b) right var(--b),
-        var(--_g)
-      )
-      var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
-    conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
-      var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
-  transition: 0.3s, background-position 0.3s 0.3s;
-  cursor: pointer;
+@keyframes SlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.hover:hover {
-  --_i: 100%;
-  transition: 0.3s, background-size 0.3s 0.3s;
+@keyframes SlideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 @media only screen and (max-width: 768px) {
   .nav-item,
   .dropdown-item {
@@ -450,9 +604,13 @@ form button {
   }
   .Who-Photo {
     margin: 0;
+    max-width: 100%;
+  }
+  #recaptcha {
+    min-width: 36%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 11.5px;
   }
@@ -530,5 +688,8 @@ form button {
   }
   .footer ul {
     justify-content: center;
+  }
+  #recaptcha {
+    min-width: 69%;
   }
 }

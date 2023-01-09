@@ -1,3 +1,31 @@
+<?php
+if(isset($_POST['submit']))
+{
+$user_Fname = $_POST['Fname'];
+$user_Lname = $_POST['Lname'];
+$user_email = $_POST['Email'];
+$user_subject = $_POST['Subject'];
+$user_message = $_POST['Msg'];
+$email_form='Realedge@Realedge.com';
+$subject="mail from $user_Fname $user_Lname, $user_subject";
+$title=$user_subject;
+$body=
+"$user_message.\n".
+"\n".
+"\n".
+"\n".
+"\n".
+"<div style='margin-top:5rem;'>from : $user_Fname $user_Lname.</div> \n".
+"<div>Email : $user_email.</div>\n";
+$email_body='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" /> <title>'.$subject.'</title> <style> body { font-family: "Montserrat"; margin: 0; height: 100vh; padding: 0; } .text-center img { width: 8rem; } .body { font-size: 1.5rem; padding: 1rem; margin: 2rem 0; } </style> </head> <body style="background: #e1e1e1"> <div class="container"> <div class="text-center imc"style=" background: #0a0a0a;display: flex;justify-content: center;align-items: center;padding: 0.5rem; margin-top:1rem;"> <img src="https://maxatta3.000webhostapp.com/images/rea-original.png" alt="" style="margin: 0 auto;" /> </div> <div class="d-flex mt"> <div class="mt fs-big" style="font-size: 2.5rem; text-align: center; margin: 2rem 0" > '.$title.' </div> <div class="body"> '.$body.' </div> <div class="footer" style=" margin-top: auto; background: #0a0a0a; display: flex; padding: 0.5rem; justify-content: center; align-items: center; color: white;width:100;text-align:center;" > maxatta © 2022 All Rights Reserved. </div> </div> </div> </body> </html>';
+$to_email="marcomark5050@gmail.com";
+$headers="From: $email_form \r\n";
+$headers .="Reply-To: $user_email \r\n";
+$headers  .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+mail($to_email, $subject, $email_body, $headers)or die("Error!");
+}
+echo'
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <title>realedgeassociates</title>
@@ -32,7 +60,7 @@
             ><img src="images/rea-original.png" alt="Logo"
           /></a>
           <ul class="nav">
-            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item">
               <a
                 class="nav-link dropdown-toggle"
@@ -229,7 +257,7 @@
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item"><a href="#">Home</a></li>
+                  <li class="nav-item"><a href="index.html">Home</a></li>
                   <li class="nav-item">
                     <a
                       class="nav-link dropdown-toggle"
@@ -405,263 +433,63 @@
           </div>
         </nav>
         <div class="content">
-          <h1>Limitless possibilities.</h1>
-          <p>
-            REA IS A GO TO NAME IN THE DATA SCIENCE PRODUCT DEVELOPMENT AND
-            CONSULTANCY SPACE. WE BUILD LASTING PARTNERSHIPS TO PROGRESS OUR
-            WORLD.
+          <h1>Thank You For Contacting Us</h1>
+          <p class="fromPageText">
+            we will reach back to you shortly!
           </p>
-          <a href="http://realedgeassociates.co/machine-learning.aspx"
-            ><button>Learn More</button></a
+          <a href="index.html"
+            ><button>Home</button></a
           >
-        </div>
-      </section>
-      <section class="Cards">
-        <h2>
-          A MODERN DATA SCIENCE COMPANY EMPOWERING ORGANISATIONS THROUGH
-          ACTIONABLE INTELLIGENCE
-        </h2>
-        <div class="Cards-wrapper">
-          <div class="Card hover">
-            <img src="images/settings.png" />
-            <h4>Machine Learning</h4>
-            <p>
-              Machine learning is a powerful artificial intelligence tool that
-              enables us to crunch petabytes of data and make sense of a
-              complicated world test.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-          <div class="Card hover">
-            <img src="images/AI.png" />
-            <h4>Actionable Intelligence</h4>
-            <p>
-              Actionable intelligence is information that can be acted upon,
-              with the further implication that actions should be taken.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-          <div class="Card hover">
-            <img src="images/database.png" />
-            <h4>Big Data</h4>
-            <p>
-              For an organisation Big Data represents a strategic asset that
-              aggregates the collective knowledge its activities.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-          <div class="Card hover">
-            <img src="images/edit.png" />
-            <h4>Commercial Research</h4>
-            <p>
-              Commercial research first seeks to deliver real world solutions
-              immediately applicable to the organisation.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-          <div class="Card hover">
-            <img src="images/line-chart.png" />
-            <h4>Product Development</h4>
-            <p>
-              Product development is the process of designing, creating and
-              marketing new products or services to benefit customers.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-          <div class="Card hover">
-            <img src="images/infinity.png" />
-            <h4>Data Science Technologies</h4>
-            <p>
-              As large data sets and fast computation become critical to
-              effective data science products new technologies have emerged.
-            </p>
-            <a href="#"
-              ><p>More info</p>
-              <img src="images/forward.png"
-            /></a>
-          </div>
-        </div>
-      </section>
-      <section class="Links">
-        <h2>Read More</h2>
-        <div class="divider"></div>
-        <div class="button-wrapper">
-          <button>What is Data Science?</button>
-          <button>Commercial Research</button>
-          <button>How to Start?</button>
-          <button>Machine Learning</button>
-          <button>Enterprise Product Delivery</button>
-          <button>Case studies</button>
-        </div>
-      </section>
-      <section class="AboutUs">
-        <div class="Info">
-          <div class="innerInfo">
-            <h1>Who Are We?</h1>
-            <div
-              id="carouselExampleFade"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p>
-                    Realedge is a data science company formed in 2011 that
-                    specialises in Machine Learning. We work with organisations
-                    to build Data Science products, that is, products that
-                    provide commercial decision value. We are a mix of
-                    experienced practitioners and leading academics brought
-                    together by a common belief that Machine Learning can
-                    provide real value to industries.
-                  </p>
-                </div>
-                <div class="carousel-item">
-                  <p>
-                    At the core of data science is the field of Machine, a field
-                    focused on the development of learning algorithms. These
-                    algorithms are designed to structure data and can be applied
-                    to various domain related problems. Combining the fields of
-                    mathematics, computing and other sciences Machine Learning
-                    provides a framework dedicated to building models of
-                    prediction. Methods from Machine Learning are developing to
-                    improve our understanding of a range of data sets : limited,
-                    large, diverse and fast changing.
-                  </p>
-                </div>
-                <div class="carousel-item">
-                  <p>
-                    While for a relatively young field much real progress has
-                    been made, experts acknowledge that there are still large
-                    challenges in ensuring Machine Learning meets the
-                    expectation of industry challenges. For that reason
-                    Realedge, principled in academic thinking, believe the
-                    correct approach to applying Machine Learning is based on
-                    incremental thoughtful steps. Thoroughly understanding the
-                    client and domain is key to providing effective commercial
-                    value through data science.
-                  </p>
-                </div>
-              </div>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleFade"
-                data-bs-slide="next"
-              >
-                Read More
-                <span class="visually-hidden">Next</span>
-                <span><img src="images/forward.png" alt="" /></span>
-              </button>
-            </div>
-          </div>
-          <img class="Who-Photo" src="images/office1.jpg" />
-        </div>
-        <div class="Contact">
-          <h1>Contact Us</h1>
-          <form method="post" action="mail.php">
-            <div class="InputItem" id="FirstName-wrapper">
-              <label for="Fname">First Name:</label>
-              <input type="text" id="Fname" name="Fname" />
-            </div>
-            <div class="InputItem" id="LastName-wrapper">
-              <label for="Lname">Last Name:</label>
-              <input type="text" id="Lname" name="Lname" />
-            </div>
-            <div class="InputItem" id="Email-wrapper">
-              <label for="Email">Your Email:</label>
-              <input type="email" id="Email" name="Email" />
-            </div>
-            <div class="InputItem" id="Subject-wrapper">
-              <label for="Subject">Your Subject:</label>
-              <input type="text" id="Subject" name="Subject" />
-            </div>
-            <div class="InputItem" id="Msg-wrapper">
-              <label for="Msg">Your Message</label>
-              <textarea id="Msg" name="Msg"></textarea>
-            </div>
-            <span class="text">Please Prove That You Aren't A Robot</span>
-            <div class="item" id="recaptcha">
-              <div id="reload"><img src="images/relod.png" /></div>
-              <div class="Fnumber"></div>
-              <div class="op">-</div>
-              <div class="Snumber"></div>
-              <div>=</div>
-              <input type="text" class="result" maxlength="2" />
-            </div>
-            <span class="status"></span>
-            <button
-              type="submit"
-              class="inactive"
-              id="submit"
-              name="submit"
-              disabled
-            >
-              Send
-            </button>
-          </form>
         </div>
       </section>
       <section class="footer">
-        <div class="col one">
-          <h4>Realedge</h4>
-          <p>
-            Company Number: 7119449
-            <br />
-            © 2014. All right reserve
-          </p>
-        </div>
-        <div class="col two">
-          <h4>Contact Info</h4>
-          <p>
-            Phone:(+44) 0208 886 6354<br />Email: sales@reasso.com<br />Registered
-            Office Address: 2 Woodberry Grove, London, N12 0DR, UK
-          </p>
-        </div>
-        <div class="col three">
-          <h4>Follow Us</h4>
-          <ul class="Socials">
-            <li>
-              <a href="https://www.facebook.com/RealEdgeAssociates/"
-                ><img src="images/facebook.png" alt="Facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="#"><img src="images/linkedin.png" alt="linkedin" /></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/Reasso_com"
-                ><img src="images/twitter.png" alt="twitter"
-              /></a>
-            </li>
-          </ul>
-          <a href="http://realedgeassociates.co/terms-of-use.aspx"
-            >Terms Of Use</a
-          >
-          <a href="http://realedgeassociates.co/privacy-policy.aspx"
-            >Privacy Policy</a
-          >
-        </div>
-      </section>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="col one">
+        <h4>Realedge</h4>
+        <p>
+          Company Number: 7119449
+          <br />
+          © 2014. All right reserve
+        </p>
+      </div>
+      <div class="col two">
+        <h4>Contact Info</h4>
+        <p>
+          Phone:(+44) 0208 886 6354<br />Email: sales@reasso.com<br />Registered
+          Office Address: 2 Woodberry Grove, London, N12 0DR, UK
+        </p>
+      </div>
+      <div class="col three">
+        <h4>Follow Us</h4>
+        <ul class="Socials">
+          <li>
+            <a href="https://www.facebook.com/RealEdgeAssociates/"
+              ><img src="images/facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/linkedin.png" alt="linkedin" /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Reasso_com"
+              ><img src="images/twitter.png" alt="twitter"
+            /></a>
+          </li>
+        </ul>
+        <a href="http://realedgeassociates.co/terms-of-use.aspx"
+          >Terms Of Use</a
+        >
+        <a href="http://realedgeassociates.co/privacy-policy.aspx"
+          >Privacy Policy</a
+        >
+      </div>
+    </section>
+  </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
+';
+?>
