@@ -646,7 +646,7 @@ FOOTER
     min-width: 69%;
   }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-item,
   .dropdown-item {
     font-size: 1.05rem;
@@ -692,4 +692,4 @@ FOOTER
   #recaptcha {
     min-width: 36%;
   }
-}
+} */
