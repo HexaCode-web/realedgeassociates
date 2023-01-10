@@ -820,6 +820,15 @@ FOOTER
     font-weight: 700;
     margin-bottom: 70px;
   }
+  #AboutTeam,
+  .TeamList {
+    flex-direction: column;
+  }
+  #AboutTeam li,
+  .TeamList .figure {
+    width: 100%;
+    max-width: none;
+  }
   .Cards,
   .Links {
     height: fit-content;
@@ -899,6 +908,15 @@ FOOTER
   #recaptcha {
     min-width: 69%;
   }
+  .PersonPage h3 {
+    font-size: 3rem;
+  }
+  .PersonPage {
+    background-size: contain;
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .nav-item,
@@ -922,6 +940,16 @@ FOOTER
     display: flex;
     background-color: transparent !important;
   }
+  #AboutTeam,
+  .TeamList {
+    flex-direction: column;
+  }
+  #AboutTeam li,
+  .TeamList .figure {
+    max-width: none;
+    width: 100%;
+  }
+
   .test {
     background-color: black !important;
   }
