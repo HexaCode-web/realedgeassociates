@@ -17,7 +17,7 @@ $body=
 "\n".
 "<div style='margin-top:5rem;'>from : $user_Fname $user_Lname.</div> \n".
 "<div>Email : $user_email.</div>\n";
-$email_body='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" /> <title>'.$subject.'</title> <style> body { font-family: "Montserrat"; margin: 0; height: 100vh; padding: 0; } .text-center img { width: 8rem; } .body { font-size: 1.5rem; padding: 1rem; margin: 2rem 0; } </style> </head> <body style="background: #e1e1e1"> <div class="container"> <div class="text-center imc"style=" background: #0a0a0a;display: flex;justify-content: center;align-items: center;padding: 0.5rem; margin-top:1rem;"> <img src="https://maxatta3.000webhostapp.com/images/rea-original.png" alt="" style="margin: 0 auto;" /> </div> <div class="d-flex mt"> <div class="mt fs-big" style="font-size: 2.5rem; text-align: center; margin: 2rem 0" > '.$title.' </div> <div class="body"> '.$body.' </div> <div class="footer" style=" margin-top: auto; background: #0a0a0a; display: flex; padding: 0.5rem; justify-content: center; align-items: center; color: white;width:100;text-align:center;" > maxatta © 2022 All Rights Reserved. </div> </div> </div> </body> </html>';
+$email_body='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" /> <title>'.$subject.'</title> <style> body { font-family: "Montserrat"; margin: 0; height: 100vh; padding: 0; } .text-center img { width: 8rem; } .body { font-size: 1.5rem; padding: 1rem; margin: 2rem 0; } </style> </head> <body style="background: #e1e1e1"> <div class="container"> <div class="text-center imc"style=" background: #0a0a0a;display: flex;justify-content: center;align-items: center;padding: 0.5rem; margin-top:1rem;"> <img src="https://realedge1.000webhostapp.com/images/rea-original.png" alt="" style="margin: 0 auto;" /> </div> <div class="d-flex mt"> <div class="mt fs-big" style="font-size: 2.5rem; text-align: center; margin: 2rem 0" > '.$title.' </div> <div class="body"> '.$body.' </div> <div class="footer" style=" margin-top: auto; background: #0a0a0a; display: flex; padding: 0.5rem; justify-content: center; align-items: center; color: white;width:100;text-align:center;" > realedge © 2022 All Rights Reserved. </div> </div> </div> </body> </html>';
 $to_email="marcomark5050@gmail.com";
 $headers="From: $email_form \r\n";
 $headers .="Reply-To: $user_email \r\n";
@@ -50,13 +50,12 @@ echo'
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="main">
       <section class="Header">
         <div class="nav-wrapper">
-          <a class="logo" href="#"
+          <a class="logo" href="index.html"
             ><img src="images/rea-original.png" alt="Logo"
           /></a>
           <ul class="nav">
@@ -75,28 +74,28 @@ echo'
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/data-science.aspx"
+                    href="/Data-science.html"
                     >Data Science</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/What-is-data-science.aspx"
+                    href="/WhatData.html"
                     >What is Data Science</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/actionable-intelligence.aspx"
+                    href="/actionable-intelligence.html"
                     >Actionable Intelligence</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/data-science-technologies.aspx"
+                    href="/data-science-technologies.html"
                     >Data Science Platforms
                   </a>
                 </li>
@@ -126,12 +125,12 @@ echo'
               </ul>
             </li>
             <li class="nav-item">
-              <a href="http://realedgeassociates.co/commercial-reasearch.aspx"
+              <a href="/commercial-reasearch.html"
                 >Commercial Research</a
               >
             </li>
             <li class="nav-item">
-              <a href="http://realedgeassociates.co/Data.aspx">Data</a>
+              <a href="/Data.html">Data</a>
             </li>
             <li class="nav-item">
               <a
@@ -147,7 +146,7 @@ echo'
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/machine-learning.aspx"
+                    href="/machine-learning.html"
                   >
                     Machine Learning</a
                   >
@@ -155,34 +154,17 @@ echo'
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/What-is-Machine-Learning.aspx"
+                    href="/What-is-Machine-Learning.html"
                     >What is Machine Learning?</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Big Data
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="http://realedgeassociates.co/big-data.aspx#"
-                    >What is Big DATA?</a
-                  >
-                </li>
-              </ul>
+             <li class="nav-item">
+              <a href="big-data.html">Big Data</a>
             </li>
             <li class="nav-item">
-              <a href="http://realedgeassociates.co/services.aspx">Services</a>
+              <a href="/services.html">Services</a>
             </li>
             <li class="nav-item">
               <a
@@ -198,28 +180,28 @@ echo'
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/Alliances-and-Partnerships.aspx"
+                    href="/Alliances-and-Partnerships.html"
                     >Alliances-and-Partnerships</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/Quick-Glance.aspx"
+                    href="/Quick-Glance.html"
                     >Quick Glance</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/about-us.aspx"
+                    href="/about-us.html"
                     >About Us</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="http://realedgeassociates.co/team.aspx"
+                    href="/team.html"
                     >Our Team
                   </a>
                 </li>
@@ -272,28 +254,28 @@ echo'
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/data-science.aspx"
+                          href="/Data-science.html"
                           >Data Science</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/What-is-data-science.aspx"
+                          href="/WhatData.html"
                           >What is Data Science</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/actionable-intelligence.aspx"
+                          href="/actionable-intelligence.html"
                           >Actionable Intelligence</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/data-science-technologies.aspx"
+                          href="/data-science-technologies.html"
                           >Data Science Platforms
                         </a>
                       </li>
@@ -326,12 +308,12 @@ echo'
                   </li>
                   <li class="nav-item">
                     <a
-                      href="http://realedgeassociates.co/commercial-reasearch.aspx"
+                      href="/commercial-reasearch.html"
                       >Commercial Research</a
                     >
                   </li>
                   <li class="nav-item">
-                    <a href="http://realedgeassociates.co/Data.aspx">Data</a>
+                    <a href="/Data.html">Data</a>
                   </li>
                   <li class="nav-item">
                     <a
@@ -347,7 +329,7 @@ echo'
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/machine-learning.aspx"
+                          href="/machine-learning.html"
                         >
                           Machine Learning</a
                         >
@@ -355,34 +337,15 @@ echo'
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/What-is-Machine-Learning.aspx"
+                          href="/What-is-Machine-Learning.html"
                           >What is Machine Learning?</a
                         >
                       </li>
                     </ul>
                   </li>
+                  <li><a href="big-data.html">Big Data</a></li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Big Data
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="http://realedgeassociates.co/big-data.aspx#"
-                          >What is Big DATA?</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a href="http://realedgeassociates.co/services.aspx"
+                    <a href="/services.html"
                       >Services</a
                     >
                   </li>
@@ -400,28 +363,28 @@ echo'
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/Alliances-and-Partnerships.aspx"
+                          href="/Alliances-and-Partnerships.html"
                           >Alliances-and-Partnerships</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/Quick-Glance.aspx"
+                          href="/Quick-Glance.html"
                           >Quick Glance</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/about-us.aspx"
+                          href="/about-us.html"
                           >About Us</a
                         >
                       </li>
                       <li>
                         <a
                           class="dropdown-item"
-                          href="http://realedgeassociates.co/team.aspx"
+                          href="/team.html"
                           >Our Team
                         </a>
                       </li>
@@ -475,10 +438,10 @@ echo'
             /></a>
           </li>
         </ul>
-        <a href="http://realedgeassociates.co/terms-of-use.aspx"
+        <a href="/terms-of-use.html"
           >Terms Of Use</a
         >
-        <a href="http://realedgeassociates.co/privacy-policy.aspx"
+        <a href="/privacy-policy.html"
           >Privacy Policy</a
         >
       </div>

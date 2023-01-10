@@ -25,7 +25,9 @@
 #reload,
 input,
 textarea,
-.button-wrapper button {
+.button-wrapper button,
+.btn,
+select {
   --c: #9a59b7; /* the border color */
   --b: 3px; /* the border thickness*/
   --g: 10px; /* the gap on hover */
@@ -45,7 +47,9 @@ textarea,
 #reload:hover,
 .button-wrapper button:hover,
 input:focus,
-textarea:focus {
+textarea:focus,
+.btn:hover,
+select:focus {
   --_i: 100%;
   transition: 0.3s, background-size 0.3s 0.3s;
 }
@@ -91,7 +95,10 @@ HEADER
   color: white;
 }
 .Header-nonLanding {
-  min-height: 50px;
+  background-image: none;
+  background-color: black;
+  min-height: fit-content;
+  box-shadow: 0 0 15px rgb(0 0 0 / 50%);
 }
 /*
 ///////
@@ -110,6 +117,7 @@ NAVBAR
   margin: 0;
   margin-right: 30px;
 }
+
 .navbar-toggler-icon {
   transform: translate(-5px, 0px);
 }
@@ -135,9 +143,9 @@ NAVBAR
   --bs-nav-link-padding-x: 0px;
 }
 .nav-active {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom: 1.5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0px 10px;
+  border: 1.5px solid rgb(255, 255, 255);
 }
 .nav-item {
   font-size: 0.8rem;
@@ -159,6 +167,7 @@ NAVBAR
 }
 .logo,
 .logo img {
+  padding: 10px;
   width: 140px;
 }
 .dropdown-menu {
@@ -228,8 +237,11 @@ button,
   text-transform: uppercase;
   margin: 25px 0px;
 }
-.nonLanding-innerInfo h4 {
-  font-size: 20px;
+.nonLanding-innerInfo h4,
+h5 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 25px;
   width: 80%;
   color: #931021;
 }
@@ -241,20 +253,70 @@ button,
   background-repeat: no-repeat;
   width: 100%;
   text-align: left;
+
   color: black;
-  padding: 30px 0;
+  padding: 30px 60px;
   background-image: url(images/pattern.jpg);
 }
 .Title .Location {
+  font-size: 0.8rem;
   padding-left: 30px;
-  letter-spacing: -1px;
+  /* letter-spacing: -0.5px; */
 }
 .Title h1 {
+  text-transform: uppercase;
   padding-left: 20px;
   margin-bottom: 0px;
   padding-bottom: 0;
 }
-
+.ok-tick {
+  width: 24px;
+  margin: auto;
+}
+.btn,
+.btn-primary {
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  min-width: fit-content;
+  height: 39px;
+}
+.btn {
+  padding: 0 20px;
+}
+.btn:hover {
+  color: black;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal label {
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+.modal form,
+.modal .InputItem {
+  opacity: 1;
+}
+.modal input,
+.modal textarea,
+.modal select {
+  margin: 0 auto;
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.096);
+}
+.modal input[type="submit"] {
+  background-color: transparent;
+  width: 25%;
+  margin: 0;
+  margin-left: 15px;
+}
 /*
 ///////
 SECTION 1
@@ -439,7 +501,8 @@ form {
   gap: 10px;
 }
 input,
-textarea {
+textarea,
+select {
   background-color: rgba(255, 255, 255, 0.096);
   border: none;
   border-radius: 8px;
@@ -455,7 +518,8 @@ textarea {
   cursor: auto;
 }
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
 }
 form button {
@@ -644,9 +708,12 @@ FOOTER
   section {
     height: fit-content;
   }
+  .navbar-brand,
+  .navbar-brand img {
+    width: 100px;
+  }
   .Header-nonLanding {
-    min-height: 50px;
-    background-color: gray;
+    min-height: 60px;
   }
   .Cards h2 {
     width: 93%;
@@ -739,6 +806,13 @@ FOOTER
   .nav-item,
   .dropdown-item {
     font-size: 1.05rem;
+  }
+  .navbar-brand,
+  .navbar-brand img {
+    width: 120px;
+  }
+  .Header-nonLanding {
+    min-height: 70px;
   }
   .main {
     overflow-x: hidden;
