@@ -408,6 +408,11 @@ SECTION 2
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 50% 50%;
 }
+.button-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .button-wrapper button {
   opacity: 0;
   padding: 10px;
