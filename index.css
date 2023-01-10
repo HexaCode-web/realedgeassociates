@@ -27,7 +27,9 @@ input,
 textarea,
 .button-wrapper button,
 .btn,
-select {
+select,
+#AboutTeam li,
+.TeamList .figure {
   --c: #9a59b7; /* the border color */
   --b: 3px; /* the border thickness*/
   --g: 10px; /* the gap on hover */
@@ -49,7 +51,9 @@ select {
 input:focus,
 textarea:focus,
 .btn:hover,
-select:focus {
+select:focus,
+#AboutTeam li:hover,
+.TeamList .figure:hover {
   --_i: 100%;
   transition: 0.3s, background-size 0.3s 0.3s;
 }
@@ -264,6 +268,12 @@ h5 {
   /* letter-spacing: -0.5px; */
 }
 .Title h1 {
+  background-image: linear-gradient(7deg, #9a59b7, #931021);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   text-transform: uppercase;
   padding-left: 20px;
   margin-bottom: 0px;
@@ -272,6 +282,89 @@ h5 {
 .ok-tick {
   width: 24px;
   margin: auto;
+}
+#AboutTeam {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+#AboutTeam li,
+.TeamList .figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-width: 26%;
+  max-width: 26%;
+  min-height: 350px;
+  max-height: 350px;
+}
+.TeamList .figure {
+  min-width: 22%;
+  max-width: 22%;
+}
+#AboutTeam li img,
+.TeamList .figure .Photo {
+  max-width: 148px;
+  max-height: 148px;
+  border-radius: 50%;
+}
+#AboutTeam li h3,
+.TeamList .figure h3 {
+  font-size: 20px;
+}
+.TeamList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.PersonPage {
+  background-image: url(images/pattren2.jpg);
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.PersonPage .right h1 {
+  background-image: linear-gradient(45deg, #9a59b7, #931021);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: lighter;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+.PersonPage .right p {
+  font-size: 1.2rem;
+}
+.PersonPage .left {
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.PersonPage .left h3 {
+  color: #931021;
+}
+.PersonPage .left img {
+  border-radius: 3%;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 250px;
+  max-height: 250px;
 }
 .btn,
 .btn-primary {
