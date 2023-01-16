@@ -22,7 +22,7 @@ $body=
 "<div>message:$user_message.</div>".
 "<div>Email : $user_email.</div>\n";
 $email_body='<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" /> <title>'.$subject.'</title> <style> body { font-family: "Montserrat"; margin: 0; height: 100vh; padding: 0; } .text-center img { width: 8rem; } .body { font-size: 1.5rem; padding: 1rem; margin: 2rem 0; } </style> </head> <body style="background: #e1e1e1"> <div class="container"> <div class="text-center imc"style=" background: #0a0a0a;display: flex;justify-content: center;align-items: center;padding: 0.5rem; margin-top:1rem;"> <img src="https://realedge1.000webhostapp.com//images/rea-original.png" alt="" style="margin: 0 auto;" /> </div> <div class="d-flex mt"> <div class="mt fs-big" style="font-size: 2.5rem; text-align: center; margin: 2rem 0" > '.$title.' </div> <div class="body"> '.$body.' </div> <div class="footer" style=" margin-top: auto; background: #0a0a0a; display: flex; padding: 0.5rem; justify-content: center; align-items: center; color: white;width:100;text-align:center;" > realedge © 2022 All Rights Reserved. </div> </div> </div> </body> </html>';
-$to_email="marcomark5050@gmail.com";
+$to_email="realedgeassociates@gmail.com";
 $headers="From: $email_form \r\n";
 $headers .="Reply-To: $user_email \r\n";
 $headers  .= 'MIME-Version: 1.0' . "\r\n";
@@ -411,7 +411,7 @@ echo'
       </section>
       <section class="footer">
       <div class="col one">
-        <h4>Realedge</h4>
+        <h4>Realedge Associates</h4>
         <p>
           Company Number: 7119449
           <br />
@@ -421,33 +421,27 @@ echo'
       <div class="col two">
         <h4>Contact Info</h4>
         <p>
-          Phone:(+44) 0208 886 6354<br />Email: sales@reasso.com<br />Registered
-          Office Address: 2 Woodberry Grove, London, N12 0DR, UK
+          Phone:(+44) 0208 886 6354<br />Email:
+          sales@realedgeassociates.co.uk<br />Registered Office Address: 2
+          Woodberry Grove, London, N12 0DR, UK
         </p>
       </div>
       <div class="col three">
         <h4>Follow Us</h4>
         <ul class="Socials">
-          <li>
-            <a href="https://www.facebook.com/RealEdgeAssociates/"
-              ><img src="images/facebook.png" alt="Facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/linkedin.png" alt="linkedin" /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/Reasso_com"
-              ><img src="images/twitter.png" alt="twitter"
-            /></a>
-          </li>
-        </ul>
-        <a href="/terms-of-use.html"
-          >Terms Of Use</a
-        >
-        <a href="/privacy-policy.html"
-          >Privacy Policy</a
-        >
+        <li>
+          <a href="https://www.linkedin.com/in/realedge-associates/" target="_blank"
+            ><img src="../images/linkedin.png" alt="linkedin"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Reasso_com" target="_blank"
+            ><img src="../images/twitter.png" alt="twitter"
+          /></a>
+        </li>
+      </ul>
+        <a href="terms-of-use.html">Terms Of Use</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
       </div>
     </section>
   </div>

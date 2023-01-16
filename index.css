@@ -524,6 +524,7 @@ SECTION 2
   padding: 10px;
   font-size: 1.2rem;
   width: fit-content;
+  min-width: 300px;
   --c: #9a59b7; /* the border color */
   --b: 2px; /* the border thickness*/
   --g: 2px; /* the gap on hover */
